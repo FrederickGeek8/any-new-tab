@@ -1,0 +1,10 @@
+{
+  "name": "Any New Tab",
+  "description": "Simple extension to set any webpage as your new tab!",
+  "version": "1.0",
+  "manifest_version": 2,
+  "chrome_url_overrides" : {
+    "newtab": "frame.html"
+  },
+  "permissions": ["storage"]
+}

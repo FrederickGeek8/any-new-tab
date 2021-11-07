@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="settings.js" as="script">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .button {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      z-index: 100;
+      font-size: 2.5em;
+      border-radius: 50%;
+      background: white;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 25px;
+      opacity: 0.5;
+    }
+
+    .button:hover {
+      background: #eee;
+      cursor:pointer;
+    }
+
+    #dialog {
+      display: none;
+      position: absolute;
+      width: 400px;
+      height: 300px;
+      top: 50%;
+      left: 50%;
+      background: white;
+      transform: translate(-50%, -50%);
+      padding: 25px;
+    }
+  </style>
+  <title>New Tab</title>
+</head>
+<body>
+  <a class="button" id="settings">⚙</a>
+  <div id="dialog">
+    <h1>Update New Tab Page</h1>
+    <input type="url" name="url" id="url">
+    <button id="save">Save</button>
+    <button id="exit">Exit</button>
+  </div>
+  <iframe src="about:black" id="frame" frameborder="0"></iframe>
+
+  <script src="settings.js"></script>
+</body>
+</html>
